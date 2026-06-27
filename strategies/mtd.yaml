@@ -1,0 +1,41 @@
+identity:
+  name: "MTD"
+  author: "yukwai"
+  label:
+    en_US: "Multi-Turn Conversation"
+    zh_Hans: "Multi-Turn Conversation"
+description:
+  en_US: "Manage multi-turn conversations with instruction-guided branching and context awareness."
+  zh_Hans: "Manage multi-turn conversations with instruction-guided branching and context awareness."
+parameters:
+  - name: "model"
+    type: "model-selector"
+    scope: "llm"
+    required: true
+    label:
+      en_US: "Model"
+      zh_Hans: "Model"
+  - name: "instruction"
+    type: "string"
+    required: true
+    label:
+      en_US: "Instruction"
+      zh_Hans: "Instruction"
+  - name: "query"
+    type: "string"
+    required: true
+    label:
+      en_US: "User Query"
+      zh_Hans: "User Query"
+  - name: "storage_key"
+    type: "string"
+    required: true
+    label:
+      en_US: "Storage Key"
+      zh_Hans: "Storage Key"
+    description:
+      en_US: "The key used to store and retrieve dialogue state."
+      zh_Hans: "The key used to store and retrieve dialogue state."
+extra:
+  python:
+    source: "strategies/mtd.py"

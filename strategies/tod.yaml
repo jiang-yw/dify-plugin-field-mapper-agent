@@ -1,0 +1,41 @@
+identity:
+  name: "TOD"
+  author: "yukwai"
+  label:
+    en_US: "Information Collection"
+    zh_Hans: "Information Collection"
+description:
+  en_US: "Collect structured fields through task-oriented multi-turn dialogue, with optional value mapping."
+  zh_Hans: "Collect structured fields through task-oriented multi-turn dialogue, with optional value mapping."
+parameters:
+  - name: "model"
+    type: "model-selector"
+    scope: "llm"
+    required: true
+    label:
+      en_US: "Model"
+      zh_Hans: "Model"
+  - name: "information_schema"
+    type: "string"
+    required: true
+    label:
+      en_US: "Information Schema"
+      zh_Hans: "Information Schema"
+  - name: "query"
+    type: "string"
+    required: true
+    label:
+      en_US: "User Query"
+      zh_Hans: "User Query"
+  - name: "storage_key"
+    type: "string"
+    required: true
+    label:
+      en_US: "Storage Key"
+      zh_Hans: "Storage Key"
+    description:
+      en_US: "The key used to store and retrieve dialogue state."
+      zh_Hans: "The key used to store and retrieve dialogue state."
+extra:
+  python:
+    source: "strategies/tod.py"

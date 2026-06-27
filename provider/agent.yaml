@@ -1,0 +1,16 @@
+identity:
+  author: yukwai
+  name: field_mapper_agent
+  label:
+    en_US: Field Mapper Agent
+    zh_Hans: Field Mapper Agent
+  description:
+    en_US: Collect structured information through dialogue and normalize values with mappings.
+    zh_Hans: Collect structured information through dialogue and normalize values with mappings.
+  icon: icon.svg
+strategies:
+  - strategies/tod.yaml
+  - strategies/mtd.yaml
+extra:
+  python:
+    source: provider/agent.py
